@@ -24,62 +24,94 @@ Once available, it will be downloadable from the [project page](#) under a [CC B
 The dataset is divided into `test` and `train` sets. Each set contains multiple subjects, each with the following folder structure:
 
 ```
-├──SRFlow3D/
-│ ├── test/
-│ │ ├── 031/
-│ │ │ ├── camera/
-│ │ │ │ ├── spirals.json # Camera intrinsics and extrinsics
-│ │ │ │ └── clip.json # Clip info for evaluation
-│ │ │ ├── depth/ # Depth maps
-│ │ │ │ ├── 0000.npy
-│ │ │ │ ├── 0001.npy
-│ │ │ │ └── ...
-│ │ │ ├── scaled_inv_depth/ # Scaled inverse depth
-│ │ │ │ ├── 0000.npy
-│ │ │ │ ├── 0001.npy
-│ │ │ │ └── ...
-│ │ │ ├── scaled_inv_depth_CF/ # Forward scaled inverse depth change
-│ │ │ │ ├── 0000.npy
-│ │ │ │ ├── 0001.npy
-│ │ │ │ └── ...
-│ │ │ ├── scaled_inv_depth_CB/ # Backward scaled inverse depth change
-│ │ │ │ ├── 0000.npy
-│ │ │ │ ├── 0001.npy
-│ │ │ │ └── ...
-│ │ │ ├── flow_F/ # Forward optical flow
-│ │ │ │ ├── 0000.flo
-│ │ │ │ ├── 0001.flo
-│ │ │ │ └── ...
-│ │ │ ├── flow_B/ # Backward optical flow
-│ │ │ │ ├── 0000.flo
-│ │ │ │ ├── 0001.flo
-│ │ │ │ └── ...
-│ │ │ ├── mask/ # Visibility masks
-│ │ │ │ ├── 0000.jpg
-│ │ │ │ ├── 0001.jpg
-│ │ │ │ └── ...
-│ │ │ └── render/ # Rendered RGB images
-│ │ │ │ ├── 0000.jpg
-│ │ │ │ ├── 0001.jpg
-│ │ │ │ └── ...
-│ │ ├── 056/
-│ │ │ └── ... # Same structure as above
-│ │ └── ...
-│ ├── train/
-│ │ ├── 018/
-│ │ │ ├── camera/
-│ │ │ │ ├── spirals.json
-│ │ │ ├── depth/
-│ │ │ ├── scaled_inv_depth/
-│ │ │ ├── scaled_inv_depth_CF/
-│ │ │ ├── scaled_inv_depth_CB/
-│ │ │ ├── flow_F/
-│ │ │ ├── flow_B/
-│ │ │ ├── mask/
-│ │ │ └── render/
-│ │ ├── 030/
-│ │ │ └── ... # Same structure as above
-│ │ └── ...
+├── SRFlow3D/
+│   ├── test/
+│   │   ├── camera/
+│   │   │   ├── 031/
+│   │   │   │   ├── spirals.json   # Camera intrinsics and extrinsics
+│   │   │   │   └── clip.json      # Clip info for evaluation
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── depth/                  # Depth maps
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.npy
+│   │   │   │   ├── 0001.npy
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── scaled_inv_depth/       # Scaled inverse depth
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.npy
+│   │   │   │   ├── 0001.npy
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── scaled_inv_depth_CF/    # Forward scaled inverse depth change
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.npy
+│   │   │   │   ├── 0001.npy
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── scaled_inv_depth_CB/    # Backward scaled inverse depth change
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.npy
+│   │   │   │   ├── 0001.npy
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── flow_F/                 # Forward optical flow
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.flo
+│   │   │   │   ├── 0001.flo
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── flow_B/                 # Backward optical flow
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.flo
+│   │   │   │   ├── 0001.flo
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── mask/                   # Visibility masks
+│   │   │   ├── 031/
+│   │   │   │   ├── 0000.jpg
+│   │   │   │   ├── 0001.jpg
+│   │   │   │   └── ...
+│   │   │   ├── 056/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   └── render/                 # Rendered RGB images
+│   │       ├── 031/
+│   │       │   ├── 0000.jpg
+│   │       │   ├── 0001.jpg
+│   │       │   └── ...
+│   │       ├── 056/
+│   │       │   └── ...
+│   │       └── ...
+│   ├── train/
+│   │   ├── camera/
+│   │   │   ├── 018/
+│   │   │   │   ├── spirals.json
+│   │   │   ├── 030/
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   ├── depth/
+│   │   ├── scaled_inv_depth/
+│   │   ├── scaled_inv_depth_CF/
+│   │   ├── scaled_inv_depth_CB/
+│   │   ├── flow_F/
+│   │   ├── flow_B/
+│   │   ├── mask/
+│   │   └── render/
 ```
 
 ---
