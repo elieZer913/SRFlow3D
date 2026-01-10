@@ -111,7 +111,7 @@ The dataset is divided into `test` and `train` sets. Each set contains multiple 
 │   │   ├── flow_F/
 │   │   ├── flow_B/
 │   │   ├── mask/
-│   │   └── render/
+└── └── └── render/
 ```
 
 ---
