@@ -16,6 +16,12 @@ The resulting annotations are temporally coherent and robust under complex facia
 
 ## Visualization
 
+The following video demonstrates RGB renderings, mask, optical flow, scene flow, and depth visualizations provided by the dataset.
+
+<p align="center">
+  <video src="assets/viz.mp4" width="900" controls></video>
+</p>
+
 ---
 
 ## Dataset  
