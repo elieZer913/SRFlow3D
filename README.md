@@ -55,7 +55,7 @@ The dataset is divided into `test` and `train` sets. Each set contains multiple 
 │   │   │   ├── 056/
 │   │   │   │   └── ...
 │   │   │   └── ...
-│   │   ├── scaled_inv_depth_CF/    # Forward scaled inverse depth change
+│   │   ├── scaled_inv_depth_change/    # Scaled inverse depth change
 │   │   │   ├── 031/
 │   │   │   │   ├── 0000.npy
 │   │   │   │   ├── 0001.npy
@@ -63,23 +63,7 @@ The dataset is divided into `test` and `train` sets. Each set contains multiple 
 │   │   │   ├── 056/
 │   │   │   │   └── ...
 │   │   │   └── ...
-│   │   ├── scaled_inv_depth_CB/    # Backward scaled inverse depth change
-│   │   │   ├── 031/
-│   │   │   │   ├── 0000.npy
-│   │   │   │   ├── 0001.npy
-│   │   │   │   └── ...
-│   │   │   ├── 056/
-│   │   │   │   └── ...
-│   │   │   └── ...
-│   │   ├── flow_F/                 # Forward optical flow
-│   │   │   ├── 031/
-│   │   │   │   ├── 0000.flo
-│   │   │   │   ├── 0001.flo
-│   │   │   │   └── ...
-│   │   │   ├── 056/
-│   │   │   │   └── ...
-│   │   │   └── ...
-│   │   ├── flow_B/                 # Backward optical flow
+│   │   ├── flow/                 # Optical flow
 │   │   │   ├── 031/
 │   │   │   │   ├── 0000.flo
 │   │   │   │   ├── 0001.flo
@@ -112,10 +96,8 @@ The dataset is divided into `test` and `train` sets. Each set contains multiple 
 │   │   │   └── ...
 │   │   ├── depth/
 │   │   ├── scaled_inv_depth/
-│   │   ├── scaled_inv_depth_CF/
-│   │   ├── scaled_inv_depth_CB/
-│   │   ├── flow_F/
-│   │   ├── flow_B/
+│   │   ├── scaled_inv_depth_change/
+│   │   ├── flow/
 │   │   ├── mask/
 └── └── └── render/
 ```
